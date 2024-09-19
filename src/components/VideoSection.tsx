@@ -34,10 +34,10 @@ const VideoSection = ({
     if (videoRef.current == null) return;
 
     if (isVideoPlaying) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
+      videoRef.current?.play();
     } else {
-      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      videoRef.current?.pause();
     }
   }, [isVideoPlaying]);
 
