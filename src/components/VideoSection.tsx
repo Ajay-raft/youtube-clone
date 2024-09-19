@@ -55,7 +55,7 @@ const VideoSection = ({
         <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded">
           {formateDuration(duration)}
         </div>
-        <video ref={videoRef} muted playsInline className={`block h-full object-cover absolute inset-0 transition-opacity duration ${isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"}`} src={videoUrl} />
+        <video ref={videoRef} muted playsInline controls className={`block h-full object-cover absolute inset-0 transition-opacity duration ${isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"}`} src={videoUrl} />
       </a>
       <div className="flex gap-2">
         <a className="flex-shrink-0" href={`/@${channel.id}`}>
